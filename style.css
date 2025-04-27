@@ -12,11 +12,13 @@ body {
   color: #222;
   padding-bottom: 50px;
   line-height: 1.6;
+  background-color: #f9f9f9;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Sticky Navbar */
@@ -35,14 +37,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  transition: all 0.3s ease-in-out;
 }
 
 .nav ul {
   display: flex;
   list-style-type: none;
-  align-items: center;
-  justify-content: center;
+  gap: 20px;
 }
 
 .nav a {
@@ -50,6 +50,7 @@ body {
   text-decoration: none;
   padding: 7px 15px;
   transition: all 0.3s ease-in-out;
+  font-weight: 600;
 }
 
 .nav.active {
@@ -68,12 +69,11 @@ body {
 .nav a.current,
 .nav a:hover {
   color: #c0392b;
-  font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('assets/images/background.png'); /* Updated to use the local image */
+  background-image: url('assets/images/background.png'); /* Local image */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -100,25 +100,28 @@ body {
 }
 
 .hero h1 {
-  font-size: 46px;
+  font-size: 4rem;
   margin: -20px 0 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 /* Content Section */
 .content h2,
 .content h3 {
-  font-size: 150%;
+  font-size: 1.5rem;
   margin: 20px 0;
 }
 
 .content p {
   color: #555;
-  line-height: 30px;
+  line-height: 1.8;
   letter-spacing: 1.2px;
 }
 
@@ -163,7 +166,7 @@ body {
 
 #contact input,
 #contact textarea {
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
@@ -183,6 +186,24 @@ body {
   background-color: #a93226;
 }
 
+/* Footer Section */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+footer a:hover {
+  color: #c0392b;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav .container {
@@ -195,11 +216,11 @@ body {
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 2.5rem;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .portfolio-item p {
@@ -209,5 +230,9 @@ body {
   .content h2,
   .content h3 {
     font-size: 1.2rem;
+  }
+
+  footer {
+    padding: 15px 0;
   }
 }
