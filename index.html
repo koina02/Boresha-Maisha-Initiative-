@@ -1,73 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Boresha Maisha Initiative</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Boresha Maisha Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Boresha Maisha Initiative</h1>
-                <p>Empowering communities for a brighter tomorrow</p>
-            </div>
-        </section>
-    </header>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <h1 class="logo"><a href="/index.html">Boresha Maisha</a></h1>
+        <ul>
+          <li><a href="#hero" class="current">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <section id="about">
-        <div class="section-content">
-            <h2>About Us</h2>
-            <p>Boresha Maisha Initiative is committed to improving the lives of communities through sustainable programs, innovation, and partnership.</p>
-        </div>
+    <div class="hero" id="hero">
+      <div class="container">
+        <h1>Welcome To Boresha Maisha Initiative</h1>
+        <p>Empowering communities, enhancing lives, and creating impactful solutions.</p>
+      </div>
+    </div>
+
+    <section id="about" class="container content">
+      <h2>About Us</h2>
+      <p>At Boresha Maisha, we focus on providing innovative solutions that address the challenges facing our communities. Our mission is to create sustainable change through collaboration, technology, and empowerment.</p>
     </section>
 
-    <section id="services">
-        <div class="section-content">
-            <h2>Our Services</h2>
-            <p>We offer a range of services aimed at creating long-term positive change, including community development, educational programs, and social initiatives.</p>
-        </div>
+    <section id="portfolio" class="container content">
+      <h2>Our Work</h2>
+      <div class="portfolio-item">
+        <img src="assets/images/project1.jpg" alt="Project 1">
+        <p>Project 1 description</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/images/project2.jpg" alt="Project 2">
+        <p>Project 2 description</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/images/project3.jpg" alt="Project 3">
+        <p>Project 3 description</p>
+      </div>
     </section>
 
-    <section id="contact">
-        <div class="section-content">
-            <h2>Contact Us</h2>
-            <form action="mailto:contact@boreshamaisha.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
+    <section id="contact" class="container content">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Boresha Maisha Initiative. All Rights Reserved.</p>
-    </footer>
-
-    <script src="assets/scripts/app.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
 
