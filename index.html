@@ -4,31 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boresha Maisha Initiative</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="assets/images/logo.png" alt="Boresha Maisha Initiative Logo" class="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Boresha Maisha Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Boresha Maisha Initiative</h1>
+                <p>Empowering communities for a brighter tomorrow</p>
+            </div>
+        </section>
     </header>
 
-    <section class="main-content">
-        <h1>Welcome to Boresha Maisha Initiative</h1>
-        <p>Your partner in development, empowerment, and sustainable growth.</p>
+    <section id="about">
+        <div class="section-content">
+            <h2>About Us</h2>
+            <p>Boresha Maisha Initiative is committed to improving the lives of communities through sustainable programs, innovation, and partnership.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-content">
+            <h2>Our Services</h2>
+            <p>We offer a range of services aimed at creating long-term positive change, including community development, educational programs, and social initiatives.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-content">
+            <h2>Contact Us</h2>
+            <form action="mailto:contact@boreshamaisha.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Boresha Maisha Initiative. All rights reserved.</p>
+        <p>&copy; 2025 Boresha Maisha Initiative. All Rights Reserved.</p>
     </footer>
+
+    <script src="assets/scripts/app.js"></script>
 </body>
 </html>
+
 
