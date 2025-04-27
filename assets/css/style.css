@@ -1,0 +1,238 @@
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+a {
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+.btn-primary:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-secondary {
+  background: #2ecc71;
+  border-color: #2ecc71;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #27ae60;
+  border-color: #27ae60;
+}
+
+/* Hero Section */
+.welcome-hero {
+  background: linear-gradient(rgba(0,0,0,0.7), url('../images/hero-bg.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 150px 0 100px;
+  text-align: center;
+}
+
+.welcome-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* Impact Stats */
+.impact-stats {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.single-stat {
+  text-align: center;
+  padding: 30px;
+}
+
+.single-stat h3 {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+/* Programs Section */
+.programs-section {
+  padding: 80px 0;
+}
+
+.program-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.program-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+/* Success Stories */
+.stories-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.story-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.story-content {
+  padding: 25px;
+}
+
+.story-content h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.partner-logo img {
+  max-width: 180px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-logo img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Get Involved */
+.involvement-section {
+  padding: 80px 0;
+  background: #2c3e50;
+  color: #fff;
+}
+
+.involvement-option {
+  text-align: center;
+  padding: 30px;
+}
+
+.involvement-option i {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-form .form-control {
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #3498db;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: #fff;
+  padding: 60px 0 30px;
+}
+
+.footer h3, .footer h4 {
+  color: #fff;
+}
+
+.footer a {
+  color: #ecf0f1;
+}
+
+.newsletter-form input {
+  border-radius: 30px 0 0 30px;
+  padding: 15px 25px;
+}
+
+.newsletter-form button {
+  border-radius: 0 30px 30px 0;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .impact-stats .single-stat {
+    margin-bottom: 40px;
+  }
+  
+  .program-card {
+    margin-bottom: 30px;
+  }
+  
+  .partner-logos {
+    gap: 20px;
+  }
+}

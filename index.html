@@ -1,263 +1,362 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boresh Maisha Initiative - Empowering Communities and Promoting Sustainability">
-    <meta name="keywords" content="Boresh Maisha, community, sustainability, initiatives, empowerment, culture, development">
-    <meta name="author" content="Boresh Maisha">
-    <title>Boresh Maisha Initiative</title>
-    <!-- Link to your stylesheet (CSS) -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Link to external fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Link to Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Link to Feather Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="#">Boresh Maisha</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#explore">Explore</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Boresha Maisha Initiative - Empowering vulnerable communities through skills training and employment opportunities">
+        
+        <!--font-family-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Boresha Maisha Initiative - Empowering Communities</title>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="container">
-            <h1>Welcome to the Boresh Maisha Initiative</h1>
-            <p>Empowering communities and promoting sustainability through innovative solutions, culture, and initiatives.</p>
-        </div>
-    </section>
+        <!-- For favicon png -->
+        <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Us</h2>
-                <p>The Boresh Maisha Initiative is dedicated to empowering communities and fostering sustainable development through social and environmental projects.</p>
-            </div>
-            <div class="about-content">
-                <p>We focus on providing resources and creating opportunities for local communities to thrive. From educational programs to green initiatives, we are committed to making a positive impact.</p>
-            </div>
-        </div>
-    </section>
+        <!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
 
-    <!-- Explore Section -->
-    <section id="explore" class="explore-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Explore Our Initiatives</h2>
-                <p>Discover our diverse range of projects and initiatives that are changing lives around the world.</p>
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Boresha <span>Maisha</span></a>
+                </div>
+
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="scroll active"><a href="#home">home</a></li>
+                        <li class="scroll"><a href="#about">about us</a></li>
+                        <li class="scroll"><a href="#programs">programs</a></li>
+                        <li class="scroll"><a href="#stories">success stories</a></li>
+                        <li class="scroll"><a href="#partners">partners</a></li>
+                        <li class="scroll"><a href="#contact">contact</a></li>
+                        <li class="scroll"><a href="#get-involved" class="cta-button">get involved</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="explore-content">
+        </nav>
+        <!-- End Navigation -->
+
+        <!-- Hero Section -->
+        <section id="home" class="welcome-hero">
+            <div class="container">
+                <div class="welcome-hero-txt">
+                    <h2>Empowering Vulnerable Communities <br> Through Skills and Opportunity</h2>
+                    <p>
+                        Providing education, job training, and employment opportunities to transform lives
+                    </p>
+                    <div class="welcome-hero-btn">
+                        <a href="#get-involved" class="btn btn-primary">Join Our Program</a>
+                        <a href="#programs" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats -->
+        <section class="impact-stats">
+            <div class="container">
                 <div class="row">
-                    <!-- Explore Item 1 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="assets/images/explore/e1.jpg" alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">Best Rated</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li><div class="single-explore-image-icon"><i class="fa fa-arrows-alt"></i></div></li>
-                                            <li><div class="single-explore-image-icon"><i class="fa fa-bookmark-o"></i></div></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-stat">
+                            <h3 class="counter">500</h3>
+                            <p>Individuals Trained</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-stat">
+                            <h3 class="counter">200</h3>
+                            <p>Job Placements</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-stat">
+                            <h3 class="counter">15</h3>
+                            <p>Partner Organizations</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-stat">
+                            <h3 class="counter">10</h3>
+                            <p>Communities Reached</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Boresha Maisha</h2>
+                    <p>Transforming lives through education and employment</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Our Mission</h3>
+                        <p>Boresha Maisha Initiative, under Global Student Nest, provides skills training, job placements, and mentorship to uplift vulnerable individuals and communities.</p>
+                        <p>We believe in creating sustainable change by equipping people with marketable skills and connecting them with employment opportunities.</p>
+                        <a href="#" class="btn btn-primary">Learn More About Us</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/images/about-image.jpg" alt="Boresha Maisha team" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs -->
+        <section id="programs" class="programs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Programs</h2>
+                    <p>Pathways to empowerment and self-sufficiency</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa fa-laptop"></i>
                             </div>
-                            <div class="single-explore-txt bg-theme-1">
-                                <h2><a href="#">Tommy Helfinger Bar</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">5.0</span>
-                                    <a href="#">10 ratings</a>
-                                    <span class="explore-price-box">from <span class="explore-price">$5 - $300</span></span>
-                                    <a href="#">Restaurant</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#"><img src="assets/images/explore/person.png" alt="explore person"></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn" onclick="window.location.href='#'">Close Now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <h3>Digital Skills Training</h3>
+                            <p>Basic computer literacy, office software, and digital marketing skills to prepare for today's job market.</p>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+                            <h3>Vocational Training</h3>
+                            <p>Hands-on training in trades like carpentry, tailoring, and hospitality services.</p>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa fa-handshake-o"></i>
+                            </div>
+                            <h3>Job Placement</h3>
+                            <p>Connecting graduates with local employers and internship opportunities.</p>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section id="stories" class="stories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Success Stories</h2>
+                    <p>Real people, real transformations</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="story-card">
+                            <img src="assets/images/story1.jpg" alt="Success story" class="img-responsive">
+                            <div class="story-content">
+                                <h3>Jane's Journey</h3>
+                                <p>From unemployed to successful seamstress with her own small business.</p>
+                                <a href="#" class="read-more">Read Full Story</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Explore Item 2 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="assets/images/explore/e2.jpg" alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">Featured</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li><div class="single-explore-image-icon"><i class="fa fa-arrows-alt"></i></div></li>
-                                            <li><div class="single-explore-image-icon"><i class="fa fa-bookmark-o"></i></div></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-2">
-                                <h2><a href="#">Swim and Dine Resort</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">4.5</span>
-                                    <a href="#">8 ratings</a>
-                                    <span class="explore-price-box">from <span class="explore-price">$50 - $500</span></span>
-                                    <a href="#">Hotel</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#"><img src="assets/images/explore/person.png" alt="explore person"></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="open-btn" onclick="window.location.href='#'">Open Now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="story-card">
+                            <img src="assets/images/story2.jpg" alt="Success story" class="img-responsive">
+                            <div class="story-content">
+                                <h3>Michael's Transformation</h3>
+                                <p>Digital skills training led to a full-time office administrator position.</p>
+                                <a href="#" class="read-more">Read Full Story</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Explore Item 3 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-explore-item">
-                            <div class="single-explore-img">
-                                <img src="assets/images/explore/e3.jpg" alt="explore image">
-                                <div class="single-explore-img-info">
-                                    <button onclick="window.location.href='#'">Best Rated</button>
-                                    <div class="single-explore-image-icon-box">
-                                        <ul>
-                                            <li><div class="single-explore-image-icon"><i class="fa fa-arrows-alt"></i></div></li>
-                                            <li><div class="single-explore-image-icon"><i class="fa fa-bookmark-o"></i></div></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-explore-txt bg-theme-3">
-                                <h2><a href="#">Europe Tour</a></h2>
-                                <p class="explore-rating-price">
-                                    <span class="explore-rating">4.8</span>
-                                    <a href="#">15 ratings</a>
-                                    <span class="explore-price-box">from <span class="explore-price">$100 - $1000</span></span>
-                                    <a href="#">Travel</a>
-                                </p>
-                                <div class="explore-person">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="explore-person-img">
-                                                <a href="#"><img src="assets/images/explore/person.png" alt="explore person"></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="explore-open-close-part">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <button class="close-btn" onclick="window.location.href='#'">Close Now</button>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="explore-map-icon">
-                                                <a href="#"><i data-feather="map-pin"></i></a>
-                                                <a href="#"><i data-feather="upload"></i></a>
-                                                <a href="#"><i data-feather="heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="story-card">
+                            <img src="assets/images/story3.jpg" alt="Success story" class="img-responsive">
+                            <div class="story-content">
+                                <h3>Grace's Growth</h3>
+                                <p>Hospitality training resulted in a hotel management position.</p>
+                                <a href="#" class="read-more">Read Full Story</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
+        <!-- Partners Section -->
+        <section id="partners" class="partners-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Partners</h2>
+                    <p>Collaborating for greater impact</p>
+                </div>
+                <div class="partner-logos">
+                    <div class="partner-logo"><img src="assets/images/partner1.png" alt="Partner logo"></div>
+                    <div class="partner-logo"><img src="assets/images/partner2.png" alt="Partner logo"></div>
+                    <div class="partner-logo"><img src="assets/images/partner3.png" alt="Partner logo"></div>
+                    <div class="partner-logo"><img src="assets/images/partner4.png" alt="Partner logo"></div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary">Become a Partner</a>
+                </div>
             </div>
-            <div class="contact-content">
-                <form action="#" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+        </section>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit">Send Message</button>
-                </form>
+        <!-- Get Involved -->
+        <section id="get-involved" class="involvement-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get Involved</h2>
+                    <p>Join us in transforming lives</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="involvement-option">
+                            <i class="fa fa-graduation-cap"></i>
+                            <h3>Apply for Training</h3>
+                            <p>Are you or someone you know interested in our programs?</p>
+                            <a href="#" class="btn btn-secondary">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="involvement-option">
+                            <i class="fa fa-heart"></i>
+                            <h3>Volunteer</h3>
+                            <p>Share your skills and time as a trainer or mentor.</p>
+                            <a href="#" class="btn btn-secondary">Volunteer</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="involvement-option">
+                            <i class="fa fa-handshake-o"></i>
+                            <h3>Partner With Us</h3>
+                            <p>Businesses can support through employment opportunities or donations.</p>
+                            <a href="#" class="btn btn-secondary">Partner Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Boresh Maisha Initiative. All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <p>We'd love to hear from you</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <p><i class="fa fa-map-marker"></i> Nairobi, Kenya</p>
+                            <p><i class="fa fa-phone"></i> +254 700 000000</p>
+                            <p><i class="fa fa-envelope"></i> info@boreshamaisha.org</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Link to JavaScript -->
-    <script src="scripts.js"></script>
-</body>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Boresha Maisha</h3>
+                        <p>Empowering vulnerable communities through skills training and employment opportunities.</p>
+                        <p>A program of Global Student Nest.</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#stories">Stories</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="#get-involved">Apply</a></li>
+                            <li><a href="#get-involved">Volunteer</a></li>
+                            <li><a href="#partners">Partner</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to receive updates on our programs and impact.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email">
+                            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Boresha Maisha Initiative. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
 </html>
