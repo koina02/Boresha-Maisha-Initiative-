@@ -1,7 +1,7 @@
 // Smooth Scrolling for anchor links
 document.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        // Prevent default behavior
+        // Prevent default behavior (which is jumping to the section instantly)
         e.preventDefault();
 
         // Scroll to the section related to the link clicked

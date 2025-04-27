@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -72,10 +73,10 @@ body {
 
 /* Hero Section */
 .hero {
-  background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('assets/images/background.png'); /* Updated to use the local image */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center;
   height: 100vh;
   color: #fff;
   display: flex;

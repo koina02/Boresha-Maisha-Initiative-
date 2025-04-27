@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Boresha Maisha Initiative</title>
-  </head>
-  <body>
-    <!-- Navbar Section -->
-    <nav class="nav">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boresha Maisha Initiative</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="nav">
       <div class="container">
-        <h1 class="logo"><a href="#hero">Boresha Maisha</a></h1>
+        <div class="logo">Boresha Maisha Initiative</div> <!-- Updated logo -->
         <ul>
-          <li><a href="#hero" class="current">Home</a></li>
+          <li><a href="#home" class="current">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero" id="hero">
-      <div class="container">
-        <h1>Welcome To Boresha Maisha Initiative</h1>
-        <p>Empowering communities, enhancing lives, and creating impactful solutions.</p>
-      </div>
     </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about" class="container content">
-      <h2>About Us</h2>
-      <p>At Boresha Maisha, we focus on providing innovative solutions that address the challenges facing our communities. Our mission is to create sustainable change through collaboration, technology, and empowerment.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Boresha Maisha Initiative</h1>
+    <p>Empowering communities for a brighter future</p>
+  </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="container content">
-      <h2>Our Work</h2>
-      <div class="portfolio-item">
-        <img src="assets/images/project1.jpg" alt="Project 1">
-        <p>Project 1 description</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/images/project2.jpg" alt="Project 2">
-        <p>Project 2 description</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/images/project3.jpg" alt="Project 3">
-        <p>Project 3 description</p>
-      </div>
-    </section>
+  <!-- About Section -->
+  <section class="content" id="about">
+    <h2>About Us</h2>
+    <p>We are dedicated to transforming lives through innovative programs and impactful initiatives.</p>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
