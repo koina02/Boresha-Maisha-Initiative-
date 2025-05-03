@@ -1,362 +1,709 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Boresha Maisha Initiative - Empowering vulnerable communities through skills training and employment opportunities">
-        
-        <!--font-family-->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>Boresha Maisha Initiative - Empowering Communities</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boresha Maisha Initiative | Empowering Communities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --dark: #121212;
+            --darker: #0D0D0D;
+            --light: #F5F5F5;
+            --gray: #2A2A2A;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-        <!-- For favicon png -->
-        <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
 
-        <!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-    </head>
-    
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-        
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Boresha <span>Maisha</span></a>
-                </div>
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
 
-                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="scroll active"><a href="#home">home</a></li>
-                        <li class="scroll"><a href="#about">about us</a></li>
-                        <li class="scroll"><a href="#programs">programs</a></li>
-                        <li class="scroll"><a href="#stories">success stories</a></li>
-                        <li class="scroll"><a href="#partners">partners</a></li>
-                        <li class="scroll"><a href="#contact">contact</a></li>
-                        <li class="scroll"><a href="#get-involved" class="cta-button">get involved</a></li>
-                    </ul>
+        /* Navigation */
+        nav {
+            background: rgba(13, 13, 13, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: var(--light);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(13,13,13,0.9), rgba(13,13,13,0.6));
+            z-index: -1;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.8;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--primary);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .secondary-button:hover {
+            background: rgba(108, 99, 255, 0.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 5rem 5%;
+            background: var(--darker);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            border-radius: 10px;
+            background: var(--gray);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: var(--primary);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 6rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: var(--gray);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .program-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .program-content {
+            padding: 1.5rem;
+        }
+
+        .program-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .program-content p {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .program-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 5%;
+            background: var(--darker);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--gray);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.2;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #0A0A0A;
+            padding: 5rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-logo-main {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+
+        .footer-logo-sub {
+            font-size: 0.9rem;
+            color: var(--light);
+            opacity: 0.8;
+        }
+
+        .footer-mission {
+            opacity: 0.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            opacity: 0.7;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">
+            <img src="https://via.placeholder.com/40x40" alt="Boresha Maisha Initiative">
+        </a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#programs">Programs</a>
+            <a href="#impact">Impact</a>
+            <a href="#stories">Stories</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="cta-button">Get Involved</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Empowered community" class="hero-bg">
+        <div class="hero-content fade-in">
+            <h1>Empowering Communities Through Skills and Opportunity</h1>
+            <p>Boresha Maisha Initiative provides vocational training, financial literacy, and job placement services to transform lives and uplift vulnerable populations.</p>
+            <div class="button-group">
+                <button class="cta-button">Join Our Programs</button>
+                <button class="secondary-button">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="impact">
+        <div class="stat-item fade-in delay-1">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Individuals Trained</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Job Placements</div>
+        </div>
+        <div class="stat-item fade-in delay-1">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Partner Organizations</div>
+        </div>
+        <div class="stat-item fade-in delay-2">
+            <div class="stat-number">10</div>
+            <div class="stat-label">Communities Reached</div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="section-header fade-in">
+            <h2>Our Empowerment Programs</h2>
+            <p>Comprehensive training and support systems designed to create sustainable change</p>
+        </div>
+        <div class="programs-grid">
+            <div class="program-card fade-in delay-1">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Vocational Training" class="program-image">
+                <div class="program-content">
+                    <span class="program-tag">Skills Development</span>
+                    <h3>Vocational Training</h3>
+                    <p>Hands-on training in high-demand trades including carpentry, tailoring, and solar panel installation.</p>
+                    <button class="secondary-button">Explore Programs</button>
                 </div>
             </div>
-        </nav>
-        <!-- End Navigation -->
+            <div class="program-card fade-in delay-2">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Financial Literacy" class="program-image">
+                <div class="program-content">
+                    <span class="program-tag">Education</span>
+                    <h3>Financial Literacy</h3>
+                    <p>Comprehensive money management courses covering budgeting, saving, and micro-investment strategies.</p>
+                    <button class="secondary-button">Learn More</button>
+                </div>
+            </div>
+            <div class="program-card fade-in delay-3">
+                <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Women's Empowerment" class="program-image">
+                <div class="program-content">
+                    <span class="program-tag">Women Focused</span>
+                    <h3>Mama Kazi Hub</h3>
+                    <p>Specialized programs for women including childcare support and flexible work opportunities.</p>
+                    <button class="secondary-button">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section id="home" class="welcome-hero">
-            <div class="container">
-                <div class="welcome-hero-txt">
-                    <h2>Empowering Vulnerable Communities <br> Through Skills and Opportunity</h2>
-                    <p>
-                        Providing education, job training, and employment opportunities to transform lives
-                    </p>
-                    <div class="welcome-hero-btn">
-                        <a href="#get-involved" class="btn btn-primary">Join Our Program</a>
-                        <a href="#programs" class="btn btn-secondary">Learn More</a>
+    <!-- Testimonials -->
+    <section class="testimonials" id="stories">
+        <div class="section-header fade-in">
+            <h2>Success Stories</h2>
+            <p>Hear from those whose lives have been transformed through our programs</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card fade-in delay-1">
+                <div class="testimonial-text">
+                    "The carpentry program gave me skills I use every day. I now run my own workshop and employ two others."
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John M." class="author-avatar">
+                    <div class="author-info">
+                        <h4>John M.</h4>
+                        <p>Carpentry Graduate</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Impact Stats -->
-        <section class="impact-stats">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-stat">
-                            <h3 class="counter">500</h3>
-                            <p>Individuals Trained</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-stat">
-                            <h3 class="counter">200</h3>
-                            <p>Job Placements</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-stat">
-                            <h3 class="counter">15</h3>
-                            <p>Partner Organizations</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-stat">
-                            <h3 class="counter">10</h3>
-                            <p>Communities Reached</p>
-                        </div>
+            <div class="testimonial-card fade-in delay-2">
+                <div class="testimonial-text">
+                    "Financial literacy training helped me save enough to start a small business. My children are now in school."
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mary W." class="author-avatar">
+                    <div class="author-info">
+                        <h4>Mary W.</h4>
+                        <p>Entrepreneur</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- About Us -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Boresha Maisha</h2>
-                    <p>Transforming lives through education and employment</p>
+            <div class="testimonial-card fade-in delay-3">
+                <div class="testimonial-text">
+                    "The Mama Kazi program gave me flexible work I can do while caring for my children. Life-changing!"
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Our Mission</h3>
-                        <p>Boresha Maisha Initiative, under Global Student Nest, provides skills training, job placements, and mentorship to uplift vulnerable individuals and communities.</p>
-                        <p>We believe in creating sustainable change by equipping people with marketable skills and connecting them with employment opportunities.</p>
-                        <a href="#" class="btn btn-primary">Learn More About Us</a>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="assets/images/about-image.jpg" alt="Boresha Maisha team" class="img-responsive">
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Grace N." class="author-avatar">
+                    <div class="author-info">
+                        <h4>Grace N.</h4>
+                        <p>Tailoring Specialist</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Programs -->
-        <section id="programs" class="programs-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Programs</h2>
-                    <p>Pathways to empowerment and self-sufficiency</p>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo-container">
+                    <div class="footer-logo-text">
+                        <div class="footer-logo-main">Boresha Maisha</div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="program-card">
-                            <div class="program-icon">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-                            <h3>Digital Skills Training</h3>
-                            <p>Basic computer literacy, office software, and digital marketing skills to prepare for today's job market.</p>
-                            <a href="#" class="btn btn-secondary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="program-card">
-                            <div class="program-icon">
-                                <i class="fa fa-briefcase"></i>
-                            </div>
-                            <h3>Vocational Training</h3>
-                            <p>Hands-on training in trades like carpentry, tailoring, and hospitality services.</p>
-                            <a href="#" class="btn btn-secondary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="program-card">
-                            <div class="program-icon">
-                                <i class="fa fa-handshake-o"></i>
-                            </div>
-                            <h3>Job Placement</h3>
-                            <p>Connecting graduates with local employers and internship opportunities.</p>
-                            <a href="#" class="btn btn-secondary">Learn More</a>
-                        </div>
-                    </div>
+                <p class="footer-mission">Transforming lives through skills development and economic empowerment.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- Success Stories -->
-        <section id="stories" class="stories-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Success Stories</h2>
-                    <p>Real people, real transformations</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="story-card">
-                            <img src="assets/images/story1.jpg" alt="Success story" class="img-responsive">
-                            <div class="story-content">
-                                <h3>Jane's Journey</h3>
-                                <p>From unemployed to successful seamstress with her own small business.</p>
-                                <a href="#" class="read-more">Read Full Story</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="story-card">
-                            <img src="assets/images/story2.jpg" alt="Success story" class="img-responsive">
-                            <div class="story-content">
-                                <h3>Michael's Transformation</h3>
-                                <p>Digital skills training led to a full-time office administrator position.</p>
-                                <a href="#" class="read-more">Read Full Story</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="story-card">
-                            <img src="assets/images/story3.jpg" alt="Success story" class="img-responsive">
-                            <div class="story-content">
-                                <h3>Grace's Growth</h3>
-                                <p>Hospitality training resulted in a hotel management position.</p>
-                                <a href="#" class="read-more">Read Full Story</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-links">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="#">Vocational Training</a></li>
+                    <li><a href="#">Financial Literacy</a></li>
+                    <li><a href="#">Women's Empowerment</a></li>
+                    <li><a href="#">Job Placement</a></li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Partners Section -->
-        <section id="partners" class="partners-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Partners</h2>
-                    <p>Collaborating for greater impact</p>
-                </div>
-                <div class="partner-logos">
-                    <div class="partner-logo"><img src="assets/images/partner1.png" alt="Partner logo"></div>
-                    <div class="partner-logo"><img src="assets/images/partner2.png" alt="Partner logo"></div>
-                    <div class="partner-logo"><img src="assets/images/partner3.png" alt="Partner logo"></div>
-                    <div class="partner-logo"><img src="assets/images/partner4.png" alt="Partner logo"></div>
-                </div>
-                <div class="text-center">
-                    <a href="#" class="btn btn-primary">Become a Partner</a>
-                </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Impact Stories</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Get Involved -->
-        <section id="get-involved" class="involvement-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get Involved</h2>
-                    <p>Join us in transforming lives</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="involvement-option">
-                            <i class="fa fa-graduation-cap"></i>
-                            <h3>Apply for Training</h3>
-                            <p>Are you or someone you know interested in our programs?</p>
-                            <a href="#" class="btn btn-secondary">Apply Now</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="involvement-option">
-                            <i class="fa fa-heart"></i>
-                            <h3>Volunteer</h3>
-                            <p>Share your skills and time as a trainer or mentor.</p>
-                            <a href="#" class="btn btn-secondary">Volunteer</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="involvement-option">
-                            <i class="fa fa-handshake-o"></i>
-                            <h3>Partner With Us</h3>
-                            <p>Businesses can support through employment opportunities or donations.</p>
-                            <a href="#" class="btn btn-secondary">Partner Now</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-links">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                    <li><i class="fas fa-envelope"></i> info@boreshamaisha.org</li>
+                    <li><i class="fas fa-phone"></i> +2547 4559 4443</li>
+                </ul>
             </div>
-        </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Boresha Maisha Initiative. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contact Us</h2>
-                    <p>We'd love to hear from you</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="contact-info">
-                            <h3>Contact Information</h3>
-                            <p><i class="fa fa-map-marker"></i> Nairobi, Kenya</p>
-                            <p><i class="fa fa-phone"></i> +254 700 000000</p>
-                            <p><i class="fa fa-envelope"></i> info@boreshamaisha.org</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <script>
+        // Simple animation trigger
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                fadeObserver.observe(el);
+            });
+            
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>Boresha Maisha</h3>
-                        <p>Empowering vulnerable communities through skills training and employment opportunities.</p>
-                        <p>A program of Global Student Nest.</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#programs">Programs</a></li>
-                            <li><a href="#stories">Stories</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <h4>Get Involved</h4>
-                        <ul>
-                            <li><a href="#get-involved">Apply</a></li>
-                            <li><a href="#get-involved">Volunteer</a></li>
-                            <li><a href="#partners">Partner</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Newsletter</h4>
-                        <p>Subscribe to receive updates on our programs and impact.</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Your Email">
-                            <button type="submit"><i class="fa fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2023 Boresha Maisha Initiative. All Rights Reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/custom.js"></script>
-    </body>
+            // Mobile menu toggle would go here
+        });
+    </script>
+</body>
 </html>

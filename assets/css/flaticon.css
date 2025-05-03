@@ -1,43 +1,197 @@
-	/*
-  	Flaticon icon font: Flaticon
-  	Creation date: 16/05/2018 10:21
-  	*/
+@charset 'UTF-8';
 
+/* ===================== */
+/* MODERN FLATICON FONT */
+/* ===================== */
 @font-face {
   font-family: "Flaticon";
-  src: url("../fonts/Flaticon.eot");
-  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/Flaticon.woff") format("woff"),
-       url("../fonts/Flaticon.ttf") format("truetype"),
-       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  src: url("../fonts/Flaticon.woff2") format("woff2"),
+       url("../fonts/Flaticon.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* Better font loading performance */
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "Flaticon";
-    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+/* Base Icon Styles */
+[class^="flaticon-"]::before, 
+[class*=" flaticon-"]::before,
+[class^="flaticon-"]::after, 
+[class*=" flaticon-"]::after {
+  font-family: Flaticon;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================== */
+/* ICON SIZING SYSTEM */
+/* ===================== */
+.flaticon-xs::before,
+.flaticon-xs::after {
+  font-size: 0.75rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.flaticon-sm::before,
+.flaticon-sm::after {
+  font-size: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.flaticon-md::before,
+.flaticon-md::after {
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.flaticon-lg::before,
+.flaticon-lg::after {
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.flaticon-xl::before,
+.flaticon-xl::after {
+  font-size: 2.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* ===================== */
+/* ICON STYLING VARIANTS */
+/* ===================== */
+.flaticon-circle::before,
+.flaticon-circle::after {
+  background-color: rgba(0, 107, 86, 0.1); /* Boresha Maisha brand color */
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+.flaticon-square::before,
+.flaticon-square::after {
+  background-color: rgba(0, 107, 86, 0.1);
+  border-radius: 4px;
+  padding: 0.5em;
+}
+
+.flaticon-outline::before,
+.flaticon-outline::after {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+
+/* ===================== */
+/* ANIMATION EFFECTS */
+/* ===================== */
+.flaticon-spin::before,
+.flaticon-spin::after {
+  animation: flaticon-spin 2s infinite linear;
+}
+
+.flaticon-pulse::before,
+.flaticon-pulse::after {
+  animation: flaticon-spin 1s infinite steps(8);
+}
+
+@keyframes flaticon-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.flaticon-bounce::before,
+.flaticon-bounce::after {
+  animation: flaticon-bounce 1.5s infinite;
+}
+
+@keyframes flaticon-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ===================== */
+/* ICON DEFINITIONS */
+/* ===================== */
+.flaticon-placeholder::before { content: "\f100"; }
+.flaticon-search::before { content: "\f101"; }
+.flaticon-gps-fixed-indicator::before { content: "\f102"; }
+.flaticon-list-with-dots::before { content: "\f103"; }
+.flaticon-transport::before { content: "\f104"; }
+.flaticon-pills::before { content: "\f105"; }
+.flaticon-building::before { content: "\f106"; }
+.flaticon-travel::before { content: "\f107"; }
+.flaticon-restaurant::before { content: "\f108"; }
+.flaticon-location-on-road::before { content: "\f109"; }
+.flaticon-networking::before { content: "\f10a"; }
+.flaticon-lightbulb-idea::before { content: "\f10b"; }
+
+/* ===================== */
+/* INTERACTIVE STATES */
+/* ===================== */
+.flaticon-btn {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.flaticon-btn:hover {
+  color: #006B56; /* Boresha Maisha brand color */
+  transform: scale(1.1);
+}
+
+.flaticon-btn:active {
+  transform: scale(0.95);
+}
+
+/* ===================== */
+/* COLOR VARIANTS */
+/* ===================== */
+.flaticon-primary { color: #006B56; }
+.flaticon-secondary { color: #6c757d; }
+.flaticon-success { color: #28a745; }
+.flaticon-danger { color: #dc3545; }
+.flaticon-warning { color: #ffc107; }
+.flaticon-info { color: #17a2b8; }
+
+/* ===================== */
+/* RESPONSIVE ADJUSTMENTS */
+/* ===================== */
+@media (max-width: 768px) {
+  .flaticon-lg::before,
+  .flaticon-lg::after {
+    font-size: 1.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .flaticon-xl::before,
+  .flaticon-xl::after {
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
-  font-size: 20px;
-  font-style: normal;
-  margin-left: 0px;
+/* ===================== */
+/* ACCESSIBILITY */
+/* ===================== */
+.flaticon-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-
-.flaticon-placeholder:before { content: "\f100"; }
-.flaticon-search:before { content: "\f101"; }
-.flaticon-gps-fixed-indicator:before { content: "\f102"; }
-.flaticon-list-with-dots:before { content: "\f103"; }
-.flaticon-transport:before { content: "\f104"; }
-.flaticon-pills:before { content: "\f105"; }
-.flaticon-building:before { content: "\f106"; }
-.flaticon-travel:before { content: "\f107"; }
-.flaticon-restaurant:before { content: "\f108"; }
-.flaticon-location-on-road:before { content: "\f109"; }
-.flaticon-networking:before { content: "\f10a"; }
-.flaticon-lightbulb-idea:before { content: "\f10b"; }
